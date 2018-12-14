@@ -8,11 +8,13 @@ dotenv_path: str = '.env'
 load_dotenv(dotenv_path)
 
 ACCESS_LOG: bool = os.getenv('ACCESS_LOG', False)
+APP_NAME: str = os.getenv('APP_NAME', 'Default App')
 APP_PORT: int = os.getenv('APP_PORT', 8000)
 API_CONTACT_EMAIL: str = os.getenv('API_CONTACT_EMAIL')
 API_VERSION: str = os.getenv('API_VERSION', '/api/v1')
 
 DEBUG: bool = os.getenv('DEBUG', False)
+LOGGING_LEVEL: str = os.getenv('LOGGING_LEVEL', 'DEBUG')
 
 # Services keys from env.
 FULL_CONTACT_API_KEY: str = os.getenv('FULL_CONTACT_API_KEY')
@@ -21,3 +23,10 @@ WHOIS_API_KEY: str = os.getenv('WHOIS_API_KEY')
 
 FIREBASE_URL: str = os.getenv('FIREBASE_URL')
 FIRE_BASE_JSON: str = os.getenv('FIRE_BASE_JSON')
+
+# Postgres settings
+DATABASE_NAME: str = os.getenv('DATABASE_NAME')
+DB_USER: str = os.getenv('DB_USER')
+DB_HOST: str = os.getenv('DB_HOST')
+DB_PWD: str = os.getenv('DB_PWD')
+DB_PORT: str = os.getenv('DB_PORT')

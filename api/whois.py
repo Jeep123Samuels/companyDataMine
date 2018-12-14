@@ -9,7 +9,7 @@ blueprint_: object = Blueprint('search_whois', url_prefix=API_VERSION, strict_sl
 
 @blueprint_.route('/search/whois/', methods=['GET'])
 async def search_whois(request) -> dict:  # noqa: D103
-    search_services = whois.WhoIs()
+    search_services: object = whois.WhoIs()
     if 'domain' not in request.raw_args:
         return response.json({'message': 'Missing search query parameters.'}, status=400)
     f_base: object = firebase_custom.f_base

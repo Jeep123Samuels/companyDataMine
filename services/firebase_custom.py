@@ -28,4 +28,4 @@ class FireBase(object):  # noqa: D103
         push_ref.set(data)
 
 
-f_base = FireBase()
+f_base: object = FireBase()

@@ -14,9 +14,9 @@ async def search_full_contact(request) -> dict:  # noqa: D103
     f_base: object = firebase_custom.f_base
 
     if 'email' in request.raw_args or 'twitter' in request.raw_args:
-        search_type = 'search_person'
+        search_type: str = 'search_person'
     elif 'domain' in request.raw_args:
-        search_type = 'search_domain'
+        search_type: str = 'search_domain'
 
     if not search_type:
         return response.json({'message': 'Missing search query parameters.'}, status=400)

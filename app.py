@@ -2,13 +2,13 @@
 from sanic import Sanic
 
 from api import full_contact, index, mashape_domain, search, whois
-from config import API_VERSION, API_CONTACT_EMAIL
+from config import API_VERSION, API_CONTACT_EMAIL, APP_NAME
 
 
-app: object = Sanic('Full Contact Sandbox')
+app: object = Sanic(APP_NAME)
 app.config.API_VERSION: str = API_VERSION
-app.config.API_TITLE: str = 'Sanic Sandbox'
-app.config.API_DESCRIPTION: str = 'Sanic Sandbox'
+app.config.API_TITLE: str = APP_NAME
+app.config.API_DESCRIPTION: str = APP_NAME
 app.config.API_PRODUCES_CONTENT_TYPES: list = ['application/json']
 app.config.API_CONTACT_EMAIL: str = API_CONTACT_EMAIL
 
