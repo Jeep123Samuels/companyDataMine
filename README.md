@@ -1,7 +1,7 @@
 # companyDataMine
 Data mining service based on company information.
 
-Search and get data for domains and user's comapnies if available.
+Search and get data for domains and user's companies if available.
 
 
 For ubuntu 16.04: 
@@ -55,3 +55,10 @@ TESTS:
     
 # Further details on async databases
     https://media.readthedocs.org/pdf/peewee/latest/peewee.pdf
+    
+###################################################
+
+To use app, create get api keys for whois, 
+full contact and metropolis-api-email
+
+###################################################
