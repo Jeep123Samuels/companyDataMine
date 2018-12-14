@@ -1,7 +1,7 @@
 """Database initial."""
 
 from peewee import Model
-from peewee_async import PostgresqlDatabase
+from peewee_async import Manager, PostgresqlDatabase
 
 from config import (
     DATABASE_NAME,
@@ -18,6 +18,9 @@ app_database: object = PostgresqlDatabase(
     host=DB_HOST,
     port=DB_PORT,
 )
+
+
+db_objects: object = Manager(app_database)
 
 
 class BaseModel(Model):

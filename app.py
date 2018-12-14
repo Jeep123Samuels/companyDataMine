@@ -1,7 +1,14 @@
 """App script for Sandbox"""
 from sanic import Sanic
 
-from api import full_contact, index, mashape_domain, search, whois
+from api import (
+    full_contact,
+    index,
+    mashape_domain,
+    search,
+    users,
+    whois,
+)
 from config import API_VERSION, API_CONTACT_EMAIL, APP_NAME
 
 
@@ -18,3 +25,5 @@ app.blueprint(index.blueprint_)
 app.blueprint(mashape_domain.blueprint_)
 app.blueprint(search.blueprint_)
 app.blueprint(whois.blueprint_)
+
+app.add_route(users.UsersEndpoint.as_view(), f'{API_VERSION}/users/')
